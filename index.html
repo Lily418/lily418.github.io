@@ -1,0 +1,611 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #f3f3f3;
+        color: #1e1e1e;
+        margin: 0;
+      }
+
+      .top-line {
+        background: linear-gradient(
+          270deg,
+          #e476ff 0%,
+          #6cb5ff 50.4%,
+          #6cffed 87.09%
+        );
+        width: "100%";
+        height: 24px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 96px;
+        padding-bottom: 33px;
+      }
+
+      section {
+        padding-bottom: 20px;
+      }
+
+      h1 {
+        color: #101214;
+        font-size: 45px;
+        font-weight: 700;
+        margin: 0px;
+        padding-bottom: 29px;
+      }
+
+      h2 {
+        color: #242729;
+        font-size: 35px;
+        font-weight: 400;
+        margin: 0px;
+      }
+
+      h3 {
+        color: #73808d;
+        font-size: 0.8em;
+        font-weight: 400;
+        letter-spacing: 5px;
+        padding-top: 28px;
+        margin-bottom: 12px;
+      }
+
+      h4 {
+        font-size: 35px;
+        font-weight: 700;
+      }
+
+      h5 {
+        color: #73808d;
+        font-size: 0.8em;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+      }
+
+      h6 {
+        color: #242729;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #b1c0d0;
+        margin: 14px 0;
+        padding: 0;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        color: #73808d;
+        font-size: 26px;
+        font-weight: 400;
+      }
+
+      .contact a {
+        margin-left: 12px;
+        color: #73808d;
+        text-decoration: none;
+      }
+
+      .content {
+        padding-left: 60px;
+        padding-right: 60px;
+        max-width: 1608px;
+      }
+
+      .experience-card {
+        background-color: white;
+        margin: 37px 0;
+        padding: 80px;
+        box-shadow: 0px 4px 80px 0px rgba(115, 128, 141, 0.15);
+        border-radius: 60px;
+        min-width: 400px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .experience-card {
+          padding: 40px;
+        }
+
+        .content {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+      }
+
+      .experience-details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 40px;
+      }
+
+      .experience-copy {
+        flex: 2;
+        max-width: 800px;
+        min-width: 350px;
+        padding-top: 16px;
+      }
+
+      .experience-copy p {
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #242729;
+        font-family: Open Sans;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tech-stack {
+        max-width: 300px;
+        flex: 1;
+        padding-top: 16px;
+      }
+
+      .tech-stack h6 {
+        margin-bottom: 12px;
+      }
+      .tech-stack ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 4px 0;
+      }
+
+      .tech-stack li {
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: 400;
+        border-radius: 100px;
+        background: #73808d;
+        list-style-type: none;
+        border-radius: 100px;
+        margin: 2px 0px;
+        text-align: center;
+        text-wrap: nowrap;
+        padding: 20px;
+      }
+
+      .tech-stack li:not(:last-child) {
+        margin-right: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-line" aria-hidden="true"></div>
+    <div class="content">
+      <header>
+        <div>
+          <h1>Lily Hoskin</h1>
+          <h2>Full Stack Developer</h2>
+        </div>
+        <div class="contact">
+          <img src="icons/PaperPlaneTilt.svg" />
+          <a href="mailto:lilyh@protonmail.com">lilyh@protonmail.com</a>
+        </div>
+      </header>
+      <hr />
+      <section>
+        <h3>SUMMARY</h3>
+        <p id="summary">
+          I have over 8 years experience building software in startups. I've
+          designed, built and maintained software for mobile, web and backend
+          systems. I'm passionate about building software that is accessible,
+          secure and scalable. I'm looking for a role where I can use my
+          experience to build software that has a positive impact on people's
+          lives.
+        </p>
+      </section>
+      <section>
+        <h3>EXPERIENCE</h3>
+        <div class="experience-card">
+          <h4>Leva Clinic</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                Chronic Pain Management Clinic • Healthcare • May 2023 - Present
+              </h5>
+              <p>
+                Technical leadership of a cross functional team to iteratively
+                design and build systems to improve patient experience.
+                Including: giving patients visibility over their onboarding
+                progress and an appointment booking system. Supported my team to
+                use test driven development by creating testing utilities,
+                demonstrating their use in code and through pair programming.
+                Identifying the need for and implementing an end to end testing
+                framework to run as part of continuous integration.
+              </p>
+              <p>
+                Working towards attainment of NHS Digital Assessment Criteria by
+                improving security processes and working with my team to improve
+                the accessibility of our applications.
+              </p>
+              <p>
+                Investigating and communicating issues with our system,
+                collaboratively exploring different options to mitigate impact
+                and prioritising options for resolution.
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Typescript</li>
+                <li>Javascript</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>AWS</li>
+                <li>Serverless</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React.js</li>
+              </ul>
+              <hr />
+              <h6>Mobile</h6>
+              <ul>
+                <li>React Native</li>
+                <li>Firebase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <h4>Oxwash</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                Reducing the environmental impact of laundry • Sustainability •
+                Oct 2022 - Mar 2023
+              </h5>
+              <p>
+                Communicating, investigating, resolving, and analysing root
+                causes of issues with our system
+              </p>
+              <p>
+                Experimenting and implementing solutions to reduce pain points
+                and build good foundations for the future of our engineering
+                stack - e.g. building a design system, improving tests running
+                in CI
+              </p>
+              <p>
+                Full stack development and deployment in a cross functional team
+                to solve issues for our users
+              </p>
+              <p>
+                Line management & mentorship responsibilities. Finding
+                opportunities to help team members in their development
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Typescript</li>
+                <li>Javascript</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>AWS</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>Angular</li>
+                <li>Svelte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <h4>Helix Centre at Imperial College London</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                Heath Technology Innovation Centre • HealthTech • Oct 2018 - Sep
+                2022
+              </h5>
+              <h6>OnTrack</h6>
+              <p>
+                I built a prototype for use in a stroke rehabilitation study.
+                This included a machine learning classifier for arm movement, an
+                Apple Watch app and associated application to show the user
+                their progress, a messaging system using Node.JS and serverless
+                technology. Also a dashboard for the study coordinator using
+                React.
+              </p>
+
+              <h6>SnipIt</h6>
+              <p>
+                I built a react native application in typescript with a
+                contentful CMS to show users audio and written summaries of
+                digital health topics. Through this project I am learning about
+                NHS assurance criteria.
+              </p>
+              <h6>Children's Hospice</h6>
+              <p>
+                I built a prototype of a sensory toy using Arduino, Node.JS
+                websockets, a games development platform Pixi.JS and some
+                plants.
+              </p>
+              <h6>Dosium</h6>
+              <p>
+                Helix Centre are building an app to provide decision support for
+                medication preparation and administration. Using React I built a
+                CMS to manage the content for this app. I also used C# to
+                maintain a data transformation which converts data from an
+                external source into a form which can be consumed by our app.
+                Through this work I've also learnt about medical device
+                regulations in a software context.
+              </p>
+              <h6>Palliate</h6>
+              <p>
+                I built and maintained a React Native application using Firebase
+                and Typescript to allow carers to record administrations of
+                injectables.
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Typescript</li>
+                <li>Javascript</li>
+                <li>Python</li>
+                <li>C</li>
+                <li>C#</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>AWS</li>
+                <li>Serverless</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React</li>
+              </ul>
+              <hr />
+              <h6>Mobile</h6>
+              <ul>
+                <li>React Native</li>
+                <li>Swift</li>
+                <li>Watchkit</li>
+                <li>Firebase</li>
+              </ul>
+              <hr />
+              <h6>Machine Learning</h6>
+              <ul>
+                <li>Scikit Learn</li>
+              </ul>
+              <hr />
+
+              <h6>Hardware</h6>
+              <ul>
+                <li>Arduino</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <h4>Red Badger</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>Consultancy • FinTech • Jul 2018 - Oct 2018</h5>
+              <p>
+                At Red Badger I contributed to the Pride in London React Native
+                app
+              </p>
+              <p>
+                I also helped to build a React UI components library for HSBC.
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Typescript</li>
+                <li>Javascript</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React</li>
+              </ul>
+              <hr />
+              <h6>Mobile</h6>
+              <ul>
+                <li>React Native</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <h4>Ctrl Group</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                Health Technology Agency • HealthTech • Aug 2017 - Jun 2018
+              </h5>
+              <p>
+                Built and maintained iOS and Android applications for use in
+                clinical trials using Swift and Kotlin.
+              </p>
+              <p>
+                Built tools to support these applications using Node.JS and
+                React
+              </p>
+              <p>
+                Maintained services on AWS in compliance to USA Health Data
+                Regulations (HIPPA)
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Javascript</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.js</li>
+                <li>IBM Watson</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React</li>
+              </ul>
+              <hr />
+              <h6>Mobile</h6>
+              <ul>
+                <li>Swift</li>
+                <li>Kotlin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <h4>Memrica</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                Helping people with early stage Alzheimer's • HealthTech • Dec
+                2015 - Jul 2017
+              </h5>
+              <p>
+                Built a natural language processing system for entity extraction
+                using a neural network framework written in Javascript
+              </p>
+              <p>Built An iOS App with Swift and Couchbase Lite</p>
+              <p>Built a web dashboard using React.js.</p>
+              <p>
+                High level decision making from evaluating suitable tech to
+                prioritising features to meet business needs Introduced test
+                driven development and continuous integration to develop high
+                quality software effectively
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Javascript</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.js</li>
+                <li>Couchbase</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React</li>
+              </ul>
+              <hr />
+              <h6>Mobile</h6>
+              <ul>
+                <li>Swift</li>
+                <li>React Native</li>
+                <li>Couchbase Lite</li>
+              </ul>
+              <hr />
+              <h6>Machine Learning</h6>
+              <ul>
+                <li>nlp-compromise</li>
+              </ul>
+              <hr />
+              <h6>Continuous Integration</h6>
+              <ul>
+                <li>Bitrise.io</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <h4>Talis</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>
+                University reading list tools • EduTech • Aug 2015 - Nov 2015
+              </h5>
+              <p>
+                Building a dashboard to aggregate and analyse customer metrics
+                from various sources.
+              </p>
+              <p>Worked closely with project stakeholders to plan sprints.</p>
+              <p>Automated deployment to AWS using Puppet and Ansible.</p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Javascript</li>
+                <li>PHP</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Node.JS</li>
+                <li>MongoDB</li>
+                <li>PHP</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>AngularJS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
