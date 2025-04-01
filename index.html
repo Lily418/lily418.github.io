@@ -139,6 +139,7 @@
         box-shadow: 0px 4px 80px 0px rgba(115, 128, 141, 0.15);
         border-radius: 60px;
         min-width: 400px;
+        break-inside: avoid;
       }
 
       @media screen and (max-width: 600px) {
@@ -214,6 +215,60 @@
       .tech-stack li:not(:last-child) {
         margin-right: 12px;
       }
+
+      @media print {
+        .content {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .experience-card {
+          margin: 0px
+        }
+
+        h1 {
+        color: #101214;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0px;
+        padding-bottom: 29px;
+      }
+
+      h2 {
+        color: #242729;
+        font-size: 35px;
+        font-weight: 400;
+        margin: 0px;
+      }
+
+      h3 {
+        color: #73808d;
+        font-size: 0.8em;
+        font-weight: 400;
+        letter-spacing: 5px;
+        padding-top: 28px;
+        margin-bottom: 12px;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      h5 {
+        color: #73808d;
+        font-size: 0.8em;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+      }
+
+      h6 {
+        color: #242729;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      }
     </style>
   </head>
   <body>
@@ -239,7 +294,7 @@
       <section>
         <h3>SUMMARY</h3>
         <p id="summary">
-          I have over 8 years experience building software in startups. I've
+          I have over 9 years experience building software in startups. I've
           built and maintained software for mobile, web and backend systems. I'm
           passionate about building software that is accessible, secure and
           scalable. I'm looking for a role where I can use my experience to
@@ -249,11 +304,51 @@
       <section>
         <h3>EXPERIENCE</h3>
         <div class="experience-card">
+          <h4>HealthKey</h4>
+          <div class="experience-details">
+            <div class="experience-copy">
+              <h5>Healthcare Marketplace • Healthcare • Feb 2024 - Present</h5>
+              <p>
+                Swiftly onboarded to learn the Spring Framework & Kubernetes to build features across the entire stack.
+              </p>
+              <p>
+                Introduced end to end testing and new React design patterns to enable the team to ship higher quality code faster.
+              </p>
+              <p>
+                Iteratively shipped features prioritising business growth including search using ElasticSearch, user management integration with HR systems, a checkout process for employers to purchase healthcare packages and a recommendation engine. 
+              </p>
+            </div>
+            <div class="tech-stack">
+              <h6>Languages</h6>
+              <ul>
+                <li>Typescript</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ul>
+              <hr />
+              <h6>Backend</h6>
+              <ul>
+                <li>Spring</li>
+                <li>PostgreSQL</li>
+                <li>AWS</li>
+                <li>Kubernetes</li>
+              </ul>
+              <hr />
+              <h6>Frontend</h6>
+              <ul>
+                <li>React</li>
+              </ul>
+              <hr />
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
           <h4>Leva Clinic</h4>
           <div class="experience-details">
             <div class="experience-copy">
               <h5>
-                Chronic Pain Management Clinic • Healthcare • May 2023 - Present
+                Chronic Pain Management Clinic • Healthcare • May 2023 - Jan
+                2024
               </h5>
               <p>
                 Technical leadership of a cross functional team to iteratively
@@ -293,7 +388,7 @@
               <hr />
               <h6>Frontend</h6>
               <ul>
-                <li>React.js</li>
+                <li>React</li>
               </ul>
               <hr />
               <h6>Mobile</h6>
@@ -537,7 +632,7 @@
                 using a neural network framework written in Javascript.
               </p>
               <p>Built an iOS App with Swift and Couchbase Lite.</p>
-              <p>Built a web dashboard using React.js.</p>
+              <p>Built a web dashboard using React.</p>
               <p>
                 High level decision making from evaluating suitable tech to
                 prioritising features to meet business needs. Introduced test
