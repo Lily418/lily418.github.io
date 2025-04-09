@@ -10,13 +10,18 @@
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
@@ -387,6 +392,80 @@
   .lg\:pb-6 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 6);
+    }
+  }
+  .print\:mb-0 {
+    @media print {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .print\:mb-1 {
+    @media print {
+      margin-bottom: calc(var(--spacing) * 1);
+    }
+  }
+  .print\:break-inside-avoid {
+    @media print {
+      break-inside: avoid;
+    }
+  }
+  .print\:break-inside-avoid-page {
+    @media print {
+      break-inside: avoid-page;
+    }
+  }
+  .print\:gap-1 {
+    @media print {
+      gap: calc(var(--spacing) * 1);
+    }
+  }
+  .print\:bg-transparent {
+    @media print {
+      background-color: transparent;
+    }
+  }
+  .print\:px-0 {
+    @media print {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .print\:py-1 {
+    @media print {
+      padding-block: calc(var(--spacing) * 1);
+    }
+  }
+  .print\:py-2 {
+    @media print {
+      padding-block: calc(var(--spacing) * 2);
+    }
+  }
+  .print\:text-base {
+    @media print {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .print\:text-lg {
+    @media print {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .print\:text-xl {
+    @media print {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .print\:text-xs {
+    @media print {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
+  .print\:text-slate-900 {
+    @media print {
+      color: var(--color-slate-900);
     }
   }
 }
