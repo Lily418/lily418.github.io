@@ -1,816 +1,589 @@
 <html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
 
-      body {
-        font-family: "Open Sans", sans-serif;
-        background-color: #f3f3f3;
-        color: #1e1e1e;
-        margin: 0;
-      }
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css" />
+  <link href="./src/output.css" rel="stylesheet">
+</head>
 
-      .top-line {
-        background: linear-gradient(
-          270deg,
-          #e476ff 0%,
-          #6cb5ff 50.4%,
-          #6cffed 87.09%
-        );
-        width: "100%";
-        height: 24px;
-      }
-
-      header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 96px;
-        padding-bottom: 33px;
-      }
-
-      section {
-        padding-bottom: 20px;
-      }
-
-      h1 {
-        color: #101214;
-        font-size: 45px;
-        font-weight: 700;
-        margin: 0px;
-        padding-bottom: 29px;
-      }
-
-      h2 {
-        color: #242729;
-        font-size: 35px;
-        font-weight: 400;
-        margin: 0px;
-      }
-
-      h3 {
-        color: #73808d;
-        font-size: 0.8em;
-        font-weight: 400;
-        letter-spacing: 5px;
-        padding-top: 28px;
-        margin-bottom: 12px;
-      }
-
-      h4 {
-        font-size: 35px;
-        font-weight: 700;
-      }
-
-      h5 {
-        color: #73808d;
-        font-size: 0.8em;
-        font-weight: 400;
-        margin: 0 0 20px 0;
-      }
-
-      h6 {
-        color: #242729;
-        font-size: 0.8em;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-
-      hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #b1c0d0;
-        margin: 14px 0;
-        padding: 0;
-      }
-
-      .contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 20px;
-        color: #73808d;
-        font-size: 26px;
-        font-weight: 400;
-      }
-
-      .contact a {
-        margin-left: 12px;
-        color: #73808d;
-        text-decoration: none;
-      }
-
-      .contact img {
-        width: 32px;
-        height: 32px;
-      }
-
-      .content {
-        padding-left: 60px;
-        padding-right: 60px;
-        max-width: 1608px;
-      }
-
-      .experience-card {
-        background-color: white;
-        margin: 37px 0;
-        padding: 80px;
-        box-shadow: 0px 4px 80px 0px rgba(115, 128, 141, 0.15);
-        border-radius: 60px;
-        min-width: 400px;
-        break-inside: avoid;
-      }
-
-      @media screen and (max-width: 600px) {
-        .experience-card {
-          padding: 40px;
-        }
-
-        .content {
-          padding-left: 12px;
-          padding-right: 12px;
-        }
-      }
-
-      .experience-details {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        column-gap: 40px;
-      }
-
-      .experience-copy {
-        flex: 2;
-        max-width: 800px;
-        min-width: 350px;
-        padding-top: 16px;
-      }
-
-      .experience-copy p {
-        margin-bottom: 20px;
-      }
-
-      p {
-        color: #242729;
-        font-family: Open Sans;
-        font-size: 1em;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-
-      .tech-stack {
-        max-width: 300px;
-        flex: 1;
-        padding-top: 16px;
-      }
-
-      .tech-stack h6 {
-        margin-bottom: 12px;
-      }
-      .tech-stack ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0;
-        padding: 4px 0;
-      }
-
-      .tech-stack li {
-        color: #fff;
-        font-size: 0.8em;
-        font-weight: 400;
-        border-radius: 100px;
-        background: #73808d;
-        list-style-type: none;
-        border-radius: 100px;
-        margin: 2px 0px;
-        text-align: center;
-        text-wrap: nowrap;
-        padding: 20px;
-      }
-
-      .tech-stack li:not(:last-child) {
-        margin-right: 12px;
-      }
-
-      @media print {
-        .content {
-          padding-left: 0;
-          padding-right: 0;
-        }
-        .experience-card {
-          margin: 0px
-        }
-
-        h1 {
-        color: #101214;
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 0px;
-        padding-bottom: 29px;
-      }
-
-      h2 {
-        color: #242729;
-        font-size: 35px;
-        font-weight: 400;
-        margin: 0px;
-      }
-
-      h3 {
-        color: #73808d;
-        font-size: 0.8em;
-        font-weight: 400;
-        letter-spacing: 5px;
-        padding-top: 28px;
-        margin-bottom: 12px;
-      }
-
-      h4 {
-        font-size: 1.2rem;
-        font-weight: 700;
-      }
-
-      h5 {
-        color: #73808d;
-        font-size: 0.8em;
-        font-weight: 400;
-        margin: 0 0 20px 0;
-      }
-
-      h6 {
-        color: #242729;
-        font-size: 0.8em;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="top-line" aria-hidden="true"></div>
-    <div class="content">
-      <header>
-        <div>
-          <h1>Lily Hoskin</h1>
-          <h2>Full Stack Developer</h2>
+<body class="bg-[#f3f3f3] flex flex-col items-center pb-10 lg:pb-6">
+  <div class="w-full h-[24px] bg-[linear-gradient(270deg,_#e476ff_0%,_#6cb5ff_50.4%,_#6cffed_87.09%)]"
+    aria-hidden="true"></div>
+  <div class="flex flex-col gap-8 items-center px-3 md:px-10 max-w-7xl">
+    <header class="w-full flex flex-col gap-8 md:flex-row justify-between py-8">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-5xl font-medium">Lily Hoskin</h1>
+        <h2 class="text-4xl">Full Stack Developer</h2>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-row items-center gap-2">
+          <img src="icons/PaperPlaneTilt.svg" class="w-[32px] h-[32px]" />
+          <a class="text-blue-700" href="mailto:lilyh@protonmail.com"
+            class="text-3xl text-[#73808d]">lilyh@protonmail.com</a>
         </div>
-        <div>
-          <div class="contact">
-            <img src="icons/PaperPlaneTilt.svg" />
-            <a href="mailto:lilyh@protonmail.com">lilyh@protonmail.com</a>
+        <div class="flex flex-row items-center gap-2">
+          <img src="icons/github-mark.svg" class="w-[32px] h-[32px]" />
+          <a class="text-blue-700" href="https://github.com/Lily418" class="text-3xl text-[#73808d]">Github</a>
+        </div>
+      </div>
+    </header>
+    <hr class="w-full border-0 border-t-1 border-[#b1c0d0]" />
+    <section class="flex flex-col py-4">
+      <h3 class="text-base text-[#73808d]">SUMMARY</h3>
+      <p id="summary">
+        I have over 9 years experience building software in startups. I've
+        built and maintained software for mobile, web and backend systems. I'm
+        passionate about building software that is accessible, secure and
+        scalable. I'm looking for a role where I can use my experience to
+        build software that has a positive impact on people's lives.
+      </p>
+    </section>
+    <section class="flex flex-col gap-4">
+      <h3 class="text-base text-[#73808d]">EXPERIENCE</h3>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">HealthKey</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">Healthcare Marketplace • Healthcare • Feb 2024 - Present</h5>
+            <p class="text-base mb-4">
+              Swiftly onboarded to learn the Spring Framework & Kubernetes to build features across the entire stack.
+            </p>
+            <p class="text-base mb-4">
+              Introduced end to end testing and new React design patterns to enable the team to ship higher quality code
+              faster.
+            </p>
+            <p class="text-base mb-4">
+              Iteratively shipped features prioritising business growth including search using ElasticSearch, user
+              management integration with HR systems, a checkout process for employers to purchase healthcare packages
+              and a recommendation engine.
+            </p>
           </div>
-          <div class="contact">
-            <img src="icons/github-mark.svg" />
-            <a href="https://github.com/Lily418">Github</a>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Typescript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Java</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Python</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Spring</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">PostgreSQL</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">AWS</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Kubernetes</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </header>
-      <hr />
-      <section>
-        <h3>SUMMARY</h3>
-        <p id="summary">
-          I have over 9 years experience building software in startups. I've
-          built and maintained software for mobile, web and backend systems. I'm
-          passionate about building software that is accessible, secure and
-          scalable. I'm looking for a role where I can use my experience to
-          build software that has a positive impact on people's lives.
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Leva Clinic</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              Chronic Pain Management Clinic • Healthcare • May 2023 - Jan
+              2024
+            </h5>
+            <p class="text-base mb-4">
+              Technical leadership of a cross functional team to iteratively
+              design and build systems to improve patient experience.
+              Including: giving patients visibility over their onboarding
+              progress and an appointment booking system. Supported my team to
+              use test driven development by creating testing utilities,
+              demonstrating their use in code and through pair programming.
+              Identifying the need for and implementing an end to end testing
+              framework to run as part of continuous integration.
+            </p>
+            <p class="text-base mb-4">
+              Working towards attainment of NHS Digital Assessment Criteria by
+              improving security of our APIs and working with my team to
+              improve the accessibility of our applications.
+            </p>
+            <p class="text-base mb-4">
+              Investigating and communicating issues with our system,
+              collaboratively exploring different options to mitigate impact
+              and prioritising options for resolution.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Typescript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.js</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">PostgreSQL</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">AWS</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Serverless</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Mobile</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React Native</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Firebase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Oxwash</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              Reducing the environmental impact of laundry • Sustainability •
+              Oct 2022 - Mar 2023
+            </h5>
+            <p class="text-base mb-4">
+              Full stack development and deployment in a cross functional
+              team.
+            </p>
+            <p class="text-base mb-4">
+              Experimenting and implementing solutions to reduce pain points
+              and build good foundations for the future of our engineering
+              stack - e.g. building a design system, improving tests running
+              in CI.
+            </p>
+            <p class="text-base mb-4">
+              Line management & mentorship responsibilities. Finding
+              opportunities to help team members in their development.
+            </p>
+            <p class="text-base mb-4">
+              Communicating, investigating, resolving, and analysing root
+              causes of issues with our system.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Typescript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.js</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">MongoDB</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">AWS</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Angular</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Svelte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10" id="helix">
+        <h4 class="text-4xl pb-2">Helix Centre at Imperial College London</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              Heath Technology Innovation Centre • HealthTech • Oct 2018 - Sep
+              2022
+            </h5>
+            <h6 class="text-sm text-[#242729] italic">OnTrack</h6>
+            <p class="text-base mb-4">
+              I was the engineer in a cross functional team who ran a stroke
+              rehabilitation study which has been
+              <a class="text-blue-700" href="https://bmjopen.bmj.com/content/10/3/e034936.full">published in the BMJ
+                Open</a>. This included a
+              machine learning classifier for arm movement,
+              an Apple Watch app and associated application to show the user
+              their progress, a messaging and data collection system using
+              Node.JS and serverless technology. Also a dashboard for the
+              study coordinator using React.
+            </p>
+            <h6 class="text-sm text-[#242729] italic">Dosium</h6>
+            <p class="text-base mb-4">
+              I built a CMS to manage the complex medication data for an app
+              to provide decision support for medication preparation and
+              administration. I also used C# to maintain a data transformation
+              which converts data from an external source into a form which
+              can be consumed by our app. Through this work I've learnt about
+              medical device regulations in a software context.
+            </p>
+            <h6 class="text-sm text-[#242729] italic">SnipIt</h6>
+            <p class="text-base mb-4">
+              I built a react native application in typescript with a
+              contentful CMS to show users audio and written summaries of
+              digital health topics.
+            </p>
+            <h6 class="text-sm text-[#242729] italic">Children's Hospice</h6>
+            <p class="text-base mb-4">
+              I built a prototype of a sensory toy using Arduino, Node.JS
+              websockets, a games development platform Pixi.JS and some
+              plants.
+            </p>
+            <h6 class="text-sm text-[#242729] italic">Palliate</h6>
+            <p class="text-base mb-4">
+              I built and maintained a React Native application using Firebase
+              and Typescript to allow carers to record administrations of
+              injectables.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Typescript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Python</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">C</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">C#</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.js</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">MongoDB</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">AWS</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Serverless</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Mobile</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React Native</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Swift</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Watchkit</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Firebase</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Machine Learning</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Scikit Learn</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Hardware</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Arduino</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Red Badger</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">Consultancy • FinTech • Jul 2018 - Oct 2018</h5>
+            <p class="text-base mb-4">
+              At Red Badger I contributed to the Pride in London React Native
+              app.
+            </p>
+            <p class="text-base mb-4">
+              I also helped to build a React UI components library for HSBC.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Typescript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Mobile</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React Native</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Ctrl Group</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              Health Technology Agency • HealthTech • Aug 2017 - Jun 2018
+            </h5>
+            <p class="text-base mb-4">
+              Built and maintained iOS and Android applications for use in
+              clinical trials using Swift and Kotlin.
+            </p>
+            <p class="text-base mb-4">
+              Built a prototype of a system for automated patient monitoring
+              via telephone using IBM Watson, Nexmo, Node.JS and React.
+            </p>
+            <p class="text-base mb-4">
+              Built a system using AWS Container Registry, CloudTrail and IAM
+              for fully auditable deployments to be compliant with USA Health
+              Data Regulations (HIPPA).
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.js</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">IBM Watson</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Mobile</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Swift</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Kotlin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Memrica</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              Helping people with early stage Alzheimer's • HealthTech • Dec
+              2015 - Jul 2017
+            </h5>
+            <p class="text-base mb-4">
+              Built a natural language processing system for entity extraction
+              using a neural network framework written in Javascript.
+            </p>
+            <p class="text-base mb-4">Built an iOS App with Swift and Couchbase Lite.</p>
+            <p class="text-base mb-4">Built a web dashboard using React.</p>
+            <p class="text-base mb-4">
+              High level decision making from evaluating suitable tech to
+              prioritising features to meet business needs. Introduced test
+              driven development and continuous integration to develop high
+              quality software effectively.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.js</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Couchbase</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Mobile</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Swift</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">React Native</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Couchbase Lite</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Machine Learning</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">nlp-compromise</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Talis</h4>
+        <div class="flex flex-col md:flex-row md:gap-6 lg:gap-10">
+          <div class="flex-2">
+            <h5 class="text-slate-600 text-xl pb-2">
+              University reading list tools • EduTech • Aug 2015 - Nov 2015
+            </h5>
+            <p class="text-base mb-4">
+              Building a dashboard to aggregate and analyse customer metrics
+              from various sources.
+            </p>
+            <p class="text-base mb-4">Worked closely with project stakeholders to plan sprints.</p>
+            <p class="text-base mb-4">Automated deployment to AWS using Puppet and Ansible.</p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Languages</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Javascript</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">PHP</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Backend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">Node.JS</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">MongoDB</li>
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">PHP</li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-sm text-[#242729] pb-1">Frontend</h6>
+              <ul class="flex flex-row flex-wrap gap-1">
+                <li class="text-white bg-[#73808d] rounded-full p-1 px-2 min-w-[42px] text-center">AngularJS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col w-full gap-4">
+      <h3 class="text-base text-[#73808d]">EDUCATION</h3>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">University of Birmingham</h4>
+        <h5 class="text-slate-600 text-xl pb-2">Bachelor’s Degree Computer Science • Grade: 1st • 2012 - 2015</h5>
+        <div class="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10">
+          <div>
+            <h6 class="text-sm text-[#242729] pb-1">1st Class Degree including:</h6>
+            <table>
+              <tr>
+                <td class="pe-2">Functional Programming</td>
+                <td class="pe-2">100%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Natural Language Processing</td>
+                <td class="pe-2">97%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Software Workshop</td>
+                <td class="pe-2">96%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Introduction to AI</td>
+                <td class="pe-2">90%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">C/C++</td>
+                <td class="pe-2">87%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Intelligent Data Analysis</td>
+                <td class="pe-2">78%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Distributed and Parallel Computing</td>
+                <td class="pe-2">77%</td>
+              </tr>
+              <tr>
+                <td class="pe-2">Machine Learning</td>
+                <td class="pe-2">75%</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <h6 class="text-sm text-[#242729] pb-1">Activities and societies</h6>
+            <ul>
+              <li>Games Development
+                Society Founder
+              </li>
+              <li>BrumHack Organiser</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col w-full gap-4">
+      <h3 class="text-base text-[#73808d]">Talks</h3>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">AlterConf Berlin 2017: Beware of the Trolls</h4>
+        <p class="text-base mb-4">
+          A talk about how to consider safety and security implications when
+          building a platform
         </p>
-      </section>
-      <section>
-        <h3>EXPERIENCE</h3>
-        <div class="experience-card">
-          <h4>HealthKey</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>Healthcare Marketplace • Healthcare • Feb 2024 - Present</h5>
-              <p>
-                Swiftly onboarded to learn the Spring Framework & Kubernetes to build features across the entire stack.
-              </p>
-              <p>
-                Introduced end to end testing and new React design patterns to enable the team to ship higher quality code faster.
-              </p>
-              <p>
-                Iteratively shipped features prioritising business growth including search using ElasticSearch, user management integration with HR systems, a checkout process for employers to purchase healthcare packages and a recommendation engine. 
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Typescript</li>
-                <li>Java</li>
-                <li>Python</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Spring</li>
-                <li>PostgreSQL</li>
-                <li>AWS</li>
-                <li>Kubernetes</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <h4>Leva Clinic</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                Chronic Pain Management Clinic • Healthcare • May 2023 - Jan
-                2024
-              </h5>
-              <p>
-                Technical leadership of a cross functional team to iteratively
-                design and build systems to improve patient experience.
-                Including: giving patients visibility over their onboarding
-                progress and an appointment booking system. Supported my team to
-                use test driven development by creating testing utilities,
-                demonstrating their use in code and through pair programming.
-                Identifying the need for and implementing an end to end testing
-                framework to run as part of continuous integration.
-              </p>
-              <p>
-                Working towards attainment of NHS Digital Assessment Criteria by
-                improving security of our APIs and working with my team to
-                improve the accessibility of our applications.
-              </p>
-              <p>
-                Investigating and communicating issues with our system,
-                collaboratively exploring different options to mitigate impact
-                and prioritising options for resolution.
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Typescript</li>
-                <li>Javascript</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.js</li>
-                <li>PostgreSQL</li>
-                <li>AWS</li>
-                <li>Serverless</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-              <h6>Mobile</h6>
-              <ul>
-                <li>React Native</li>
-                <li>Firebase</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <h4>Oxwash</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                Reducing the environmental impact of laundry • Sustainability •
-                Oct 2022 - Mar 2023
-              </h5>
-              <p>
-                Full stack development and deployment in a cross functional
-                team.
-              </p>
-              <p>
-                Experimenting and implementing solutions to reduce pain points
-                and build good foundations for the future of our engineering
-                stack - e.g. building a design system, improving tests running
-                in CI.
-              </p>
-              <p>
-                Line management & mentorship responsibilities. Finding
-                opportunities to help team members in their development.
-              </p>
-              <p>
-                Communicating, investigating, resolving, and analysing root
-                causes of issues with our system.
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Typescript</li>
-                <li>Javascript</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>AWS</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>Angular</li>
-                <li>Svelte</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="experience-card" id="helix">
-          <h4>Helix Centre at Imperial College London</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                Heath Technology Innovation Centre • HealthTech • Oct 2018 - Sep
-                2022
-              </h5>
-              <h6>OnTrack</h6>
-              <p>
-                I was the engineer in a cross functional team who ran a stroke
-                rehabilitation study which has been
-                <a href="https://bmjopen.bmj.com/content/10/3/e034936.full"
-                  >published in the BMJ Open</a
-                >. This included a machine learning classifier for arm movement,
-                an Apple Watch app and associated application to show the user
-                their progress, a messaging and data collection system using
-                Node.JS and serverless technology. Also a dashboard for the
-                study coordinator using React.
-              </p>
-              <h6>Dosium</h6>
-              <p>
-                I built a CMS to manage the complex medication data for an app
-                to provide decision support for medication preparation and
-                administration. I also used C# to maintain a data transformation
-                which converts data from an external source into a form which
-                can be consumed by our app. Through this work I've learnt about
-                medical device regulations in a software context.
-              </p>
-              <h6>SnipIt</h6>
-              <p>
-                I built a react native application in typescript with a
-                contentful CMS to show users audio and written summaries of
-                digital health topics.
-              </p>
-              <h6>Children's Hospice</h6>
-              <p>
-                I built a prototype of a sensory toy using Arduino, Node.JS
-                websockets, a games development platform Pixi.JS and some
-                plants.
-              </p>
-              <h6>Palliate</h6>
-              <p>
-                I built and maintained a React Native application using Firebase
-                and Typescript to allow carers to record administrations of
-                injectables.
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Typescript</li>
-                <li>Javascript</li>
-                <li>Python</li>
-                <li>C</li>
-                <li>C#</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>AWS</li>
-                <li>Serverless</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-              <h6>Mobile</h6>
-              <ul>
-                <li>React Native</li>
-                <li>Swift</li>
-                <li>Watchkit</li>
-                <li>Firebase</li>
-              </ul>
-              <hr />
-              <h6>Machine Learning</h6>
-              <ul>
-                <li>Scikit Learn</li>
-              </ul>
-              <hr />
+        <a class="text-blue-700"
+          href="https://www.youtube.com/watch?v=kYGmVEKnNW8">https://www.youtube.com/watch?v=kYGmVEKnNW8</a>
+      </div>
+    </section>
+    <section class="flex flex-col w-full gap-4">
+      <h3 class="text-base text-slate-700">PROJECTS</h3>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Candlelight</h4>
+        <p class="text-base mb-4">
+          Candlelight is an application to support people recovering from
+          abusive relationships, like Fitbit helps you record your physical
+          health Candlelight is a health tracker for your relationships to
+          avoid a cycle of abusive relationships and help rebuild confidence.
+        </p>
+        <a class="text-blue-700"
+          href="https://github.com/Lily418/candle-light">https://github.com/Lily418/candle-light</a>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Min-Cat</h4>
+        <p class="text-base mb-4">
+          Minimalist library catalogue written using Ruby on Rails. Given a
+          MARC 21 file this app will generate a website showing the contents
+          of the catalogue.
+        </p>
+        <a class="text-blue-700" href="https://github.com/Lily418/Min-Cat">https://github.com/Lily418/Min-Cat</a>
+      </div>
+      <div class="bg-white rounded-lg lg:rounded-4xl p-4 lg:p-10">
+        <h4 class="text-4xl pb-2">Flight Simulator Air Traffic Control Voice Recognition</h4>
+        <p class="text-base mb-4">
+          A system written in Python combining optical character recognition
+          and speech to text. It allows communication with air traffic control
+          in Microsoft Flight Simulator using your voice.
+        </p>
+        <a class="text-blue-700"
+          href="https://github.com/Lily418/fs2020-atc-voice-recognition">https://github.com/Lily418/fs2020-atc-voice-recognition</a>
+      </div>
+    </section>
+  </div>
+</body>
 
-              <h6>Hardware</h6>
-              <ul>
-                <li>Arduino</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <h4>Red Badger</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>Consultancy • FinTech • Jul 2018 - Oct 2018</h5>
-              <p>
-                At Red Badger I contributed to the Pride in London React Native
-                app.
-              </p>
-              <p>
-                I also helped to build a React UI components library for HSBC.
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Typescript</li>
-                <li>Javascript</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-              <h6>Mobile</h6>
-              <ul>
-                <li>React Native</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <h4>Ctrl Group</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                Health Technology Agency • HealthTech • Aug 2017 - Jun 2018
-              </h5>
-              <p>
-                Built and maintained iOS and Android applications for use in
-                clinical trials using Swift and Kotlin.
-              </p>
-              <p>
-                Built a prototype of a system for automated patient monitoring
-                via telephone using IBM Watson, Nexmo, Node.JS and React.
-              </p>
-              <p>
-                Built a system using AWS Container Registry, CloudTrail and IAM
-                for fully auditable deployments to be compliant with USA Health
-                Data Regulations (HIPPA).
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Javascript</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.js</li>
-                <li>IBM Watson</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-              <h6>Mobile</h6>
-              <ul>
-                <li>Swift</li>
-                <li>Kotlin</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <h4>Memrica</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                Helping people with early stage Alzheimer's • HealthTech • Dec
-                2015 - Jul 2017
-              </h5>
-              <p>
-                Built a natural language processing system for entity extraction
-                using a neural network framework written in Javascript.
-              </p>
-              <p>Built an iOS App with Swift and Couchbase Lite.</p>
-              <p>Built a web dashboard using React.</p>
-              <p>
-                High level decision making from evaluating suitable tech to
-                prioritising features to meet business needs. Introduced test
-                driven development and continuous integration to develop high
-                quality software effectively.
-              </p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Javascript</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.js</li>
-                <li>Couchbase</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>React</li>
-              </ul>
-              <hr />
-              <h6>Mobile</h6>
-              <ul>
-                <li>Swift</li>
-                <li>React Native</li>
-                <li>Couchbase Lite</li>
-              </ul>
-              <hr />
-              <h6>Machine Learning</h6>
-              <ul>
-                <li>nlp-compromise</li>
-              </ul>
-              <hr />
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <h4>Talis</h4>
-          <div class="experience-details">
-            <div class="experience-copy">
-              <h5>
-                University reading list tools • EduTech • Aug 2015 - Nov 2015
-              </h5>
-              <p>
-                Building a dashboard to aggregate and analyse customer metrics
-                from various sources.
-              </p>
-              <p>Worked closely with project stakeholders to plan sprints.</p>
-              <p>Automated deployment to AWS using Puppet and Ansible.</p>
-            </div>
-            <div class="tech-stack">
-              <h6>Languages</h6>
-              <ul>
-                <li>Javascript</li>
-                <li>PHP</li>
-              </ul>
-              <hr />
-              <h6>Backend</h6>
-              <ul>
-                <li>Node.JS</li>
-                <li>MongoDB</li>
-                <li>PHP</li>
-              </ul>
-              <hr />
-              <h6>Frontend</h6>
-              <ul>
-                <li>AngularJS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h3>EDUCATION</h3>
-        <div class="experience-card">
-          <h4>University of Birmingham</h4>
-          <h5>Bachelor’s Degree Computer Science • Grade: 1st • 2012 - 2015</h5>
-          <div class="experience-details">
-            <div>
-              <h6>1st Class Degree including:</h6>
-              <table>
-                <tr>
-                  <td>Functional Programming</td>
-                  <td>100%</td>
-                </tr>
-                <tr>
-                  <td>Natural Language Processing</td>
-                  <td>97%</td>
-                </tr>
-                <tr>
-                  <td>Software Workshop</td>
-                  <td>96%</td>
-                </tr>
-                <tr>
-                  <td>Introduction to AI</td>
-                  <td>90%</td>
-                </tr>
-                <tr>
-                  <td>C/C++</td>
-                  <td>87%</td>
-                </tr>
-                <tr>
-                  <td>Intelligent Data Analysis</td>
-                  <td>78%</td>
-                </tr>
-                <tr>
-                  <td>Distributed and Parallel Computing</td>
-                  <td>77%</td>
-                </tr>
-                <tr>
-                  <td>Machine Learning</td>
-                  <td>75%</td>
-                </tr>
-              </table>
-            </div>
-            <div>
-              <h6>Activities and societies</h6>
-              <ul>
-                <li>Games Development Society Founder</li>
-                <li>BrumHack Organiser</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h3>Talks</h3>
-        <div class="experience-card">
-          <h4>AlterConf Berlin 2017: Beware of the Trolls</h4>
-          <p>
-            A talk about how to consider safety and security implications when
-            building a platform
-          </p>
-          <a href="https://www.youtube.com/watch?v=kYGmVEKnNW8"
-            >https://www.youtube.com/watch?v=kYGmVEKnNW8</a
-          >
-        </div>
-      </section>
-      <section>
-        <h3>PROJECTS</h3>
-        <div class="experience-card">
-          <h4>Candlelight</h4>
-          <p>
-            Candlelight is an application to support people recovering from
-            abusive relationships, like Fitbit helps you record your physical
-            health Candlelight is a health tracker for your relationships to
-            avoid a cycle of abusive relationships and help rebuild confidence.
-          </p>
-          <a href="https://github.com/Lily418/candle-light"
-            >https://github.com/Lily418/candle-light</a
-          >
-        </div>
-        <div class="experience-card">
-          <h4>Min-Cat</h4>
-          <p>
-            Minimalist library catalogue written using Ruby on Rails. Given a
-            MARC 21 file this app will generate a website showing the contents
-            of the catalogue.
-          </p>
-          <a href="https://github.com/Lily418/Min-Cat"
-            >https://github.com/Lily418/Min-Cat</a
-          >
-        </div>
-        <div class="experience-card">
-          <h4>Flight Simulator Air Traffic Control Voice Recognition</h4>
-          <p>
-            A system written in Python combining optical character recognition
-            and speech to text. It allows communication with air traffic control
-            in Microsoft Flight Simulator using your voice.
-          </p>
-          <a href="https://github.com/Lily418/fs2020-atc-voice-recognition"
-            >https://github.com/Lily418/fs2020-atc-voice-recognition</a
-          >
-        </div>
-      </section>
-    </div>
-  </body>
 </html>
